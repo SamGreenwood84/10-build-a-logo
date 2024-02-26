@@ -53,7 +53,9 @@ Referenced code from Challange: [09-build-a-readme](https://github.com/SamGreenw
 
 Youtube Walkthrough: [Thomas' Object Oriented Programming SVG LOGO MAKER](https://www.youtube.com/watch?v=GJYMcLus3v0)
 
-mdn web docs:  
+mdn web docs prvovided in BootCamp Spot
+
+Stack Overflow [console.log](https://stackoverflow.com/questions/49660349/how-to-create-line-breaks-in-console-log-in-node-js) 
 
 
 
