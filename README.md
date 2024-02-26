@@ -1,6 +1,10 @@
 # 10-build-a-logo
 Object-oriented Programming Challenge: SVG Logo Maker
 
+# Live Demo 
+
+Live Demo Video
+
 # User Story
 
 AS a freelance web developer
@@ -11,28 +15,32 @@ SO THAT I can organize my projects easily with color coding for subject , initia
 
 # Acceptance Criteria
 
-WHEN I have cloned the repository and inquierer 
+WHEN I have cloned the repository and inquirer and npm install is complete
 
-WHEN I am prompted for text
+THEN enter node.js in the command line
 
-THEN I can enter up to three characters
+THEN a message setting user expectations will appear "Let's build-a-logo! This easy-to-use CLI tool takes your desired input and generates a simple clean logo! Enter 3 Initials in the font and background color of your choice with 3 shapes to choose from!" 
 
-WHEN I am prompted for the text color
+WHEN I am prompted to add 3 initials
 
-THEN I can enter a color keyword (OR a hexadecimal number)
+THEN I can enter any 3 letters, upper or lowercase
 
-WHEN I am prompted for a shape
+WHEN I am prompted text color 
 
-THEN I am presented with a list of shapes to choose from: circle, triangle, 
-and square
+THEN I can enter a text color (OR a hexidecimal #)
 
-WHEN I am prompted for the shape's color
+WHEN I am prompted for the background color
 
-THEN I can enter a color keyword (OR a hexadecimal number)
+THEN I can enter a color keyword (OR a hexadecimal #)
+
+WHEN I am prompted for a shape 
+
+THEN I am presented with a list of shapes to choose from: circle, square, 
+and triangle that I can choose using the  up and down arrows
 
 WHEN I have entered input for all the prompts
 
-THEN an SVG file is created named `logo.svg`
+THEN an SVG file is created named `logo.svg` in your root folder
 
 AND the output text "Generated logo.svg" is printed in the command line
 
@@ -49,7 +57,6 @@ Youtube Walkthrough: [Thomas' Object Oriented Programming SVG LOGO MAKER](https:
 mdn web docs prvovided in BootCamp Spot
 
 Stack Overflow [console.log](https://stackoverflow.com/questions/49660349/how-to-create-line-breaks-in-console-log-in-node-js) 
-
 
 
 

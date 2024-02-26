@@ -124,6 +124,8 @@ function confirmAndGenerateSVG(choices) {
       if (confirmGeneration) {
         const svgContent = generateSVG(choices);
         writeToFile("logo.svg", svgContent);
+        console.log("*********************************************************")
+        console.log("Congratulations! You've generated logo.svg");
       } else {
         console.log(
           "Unable to generate SVG logo. Try again from the beginning."
