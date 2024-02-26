@@ -4,13 +4,15 @@
   "description": "Object-oriented Programming Challenge: SVG Logo Maker",
   "main": "index.js",
   "scripts": {
-    "test": "lib/shapes.test.js"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.2.4",
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
     "jest": "^29.7.0"
   }
 }
