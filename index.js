@@ -2,7 +2,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const { generateCircleSVG, generateSquareSVG, generateTriangleSVG } = require("./lib/shapes");
 
-console.log("Let's build-a-logo! This easy-to-use CLI tool takes your desired input and generates a simple clean 3 initial logo");
+console.log("Let's build-a-logo! This easy-to-use CLI tool takes your desired input and generates a simple clean 3 initial logo in the colors of your choice with 3 shapes to choose from!");
 
 // Function to dynamically load svgGenerator based on user input
 function loadSvgGenerator(shape) {
@@ -72,7 +72,7 @@ function confirmAndGenerateSVG(choices) {
       {
         type: "confirm",
         name: "confirmGeneration",
-        message: "Are you happy with your logo? Let's build!",
+        message: "Are you happy with your logo? Let's build it!",
         default: true,
       },
     ])
