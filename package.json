@@ -4,7 +4,7 @@
   "description": "Object-oriented Programming Challenge: SVG Logo Maker",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lib/shapes.test.js"
   },
   "keywords": [],
   "author": "",
