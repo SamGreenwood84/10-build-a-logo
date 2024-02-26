@@ -1,17 +1,17 @@
 # 10-build-a-logo
 Object-oriented Programming Challenge: SVG Logo Maker
 
-**User Story**
+# User Story
 
 AS a freelance web developer
 
 I WANT to generate a simple logo for my projects
 
-SO THAT I can organize my projects easily with color coding for subject , initials of my project title and shape for personal, 
+SO THAT I can organize my projects easily with color coding for subject , initials of my project title and shape for personal, business or client work.
 
-**Acceptance Criteria**
+# Acceptance Criteria
 
-GIVEN a command-line application that accepts user input
+WHEN I have cloned the repository and inquierer 
 
 WHEN I am prompted for text
 
@@ -39,13 +39,6 @@ AND the output text "Generated logo.svg" is printed in the command line
 WHEN I open the `logo.svg` file in a browser
 
 THEN I am shown a 300x200 pixel image that matches the criteria I entered
-
-Object-oriented Programming Challenge: SVG Logo Maker
-Your task is to build a Node.js command-line application that takes in user input to generate a logo and save it as an SVG fileLinks to an external site.. The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a .svg file.
-
-Because this application won’t be deployed, you’ll need to provide a link to a walkthrough video that demonstrates its functionality and passes all of the tests. You’ll need to submit a link to the video and add it to the README of your project.
-
-Refer to the Video Submission GuideLinks to an external site. on the Full-Stack Blog for additional guidance on creating a video.
 
 # References
 
