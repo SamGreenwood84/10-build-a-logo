@@ -7,13 +7,14 @@ const {
 } = require("./lib/shapes");
 
 console.log(
-  "Let's build-a-logo! This easy-to-use CLI tool takes your desired input and generates a simple clean logo!");
-  console.log(
-    "Enter 3 Initials in the font and background color of your choice with 3 shapes to choose from!"
-  )
-  console.log(
-    ".........................................................................................."
-  )
+  "Let's build-a-logo! This easy-to-use CLI tool takes your desired input and generates a simple clean logo!"
+);
+console.log(
+  "Enter 3 Initials in the font and background color of your choice with 3 shapes to choose from!"
+);
+console.log(
+  ".........................................................................................."
+);
 
 // Function to dynamically load svgGenerator based on user input
 function loadSvgGenerator(shape) {
@@ -34,6 +35,16 @@ const InputChoices = [
     type: "input",
     name: "text",
     message: "Add 3 initials here",
+    validate: function (input) {
+      // Check if the input consists of exactly 3 characters
+      const isThreeInitials = /^[a-zA-Z]{3}$/.test(input);
+
+      if (isThreeInitials) {
+        return true;
+      }
+
+      return "Please enter exactly 3 initials";
+    },
   },
   {
     type: "input",
