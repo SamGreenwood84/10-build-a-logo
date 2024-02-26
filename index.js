@@ -1,8 +1,14 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const { generateCircleSVG, generateSquareSVG, generateTriangleSVG } = require("./lib/shapes");
+const {
+  generateCircleSVG,
+  generateSquareSVG,
+  generateTriangleSVG,
+} = require("./lib/shapes");
 
-console.log("Let's build-a-logo! This easy-to-use CLI tool takes your desired input and generates a simple clean 3 initial logo in the colors of your choice with 3 shapes to choose from!");
+console.log(
+  "Let's build-a-logo! This easy-to-use CLI tool takes your desired input and generates a simple clean 3 initial logo in the colors of your choice with 3 shapes to choose from!"
+);
 
 // Function to dynamically load svgGenerator based on user input
 function loadSvgGenerator(shape) {
@@ -27,12 +33,33 @@ const InputChoices = [
   {
     type: "input",
     name: "textColor",
-    message: "Choose your text color",
+    message: "Choose your text color (name or hexidecimal #)",
+    validate: function (input) {
+      // Check if the input is a valid color name or hex code
+      const isColorName = /^([a-zA-Z]+)$/i.test(input);
+      const isHexCode = /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/i.test(input);
+
+      if (isColorName || isHexCode) {
+        return true;
+      }
+
+      return "Please enter a valid color name or hexadecimal color code";
+    },
   },
   {
     type: "input",
     name: "backgroundColor",
-    message: "Choose your background color",
+    message: "Choose your background color (name or hexidecimal #)",
+    validate: function (input) {
+      const isColorName = /^([a-zA-Z]+)$/i.test(input);
+      const isHexCode = /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/i.test(input);
+
+      if (isColorName || isHexCode) {
+        return true;
+      }
+
+      return "Please enter a valid color name or hexadecimal color code";
+    },
   },
   {
     type: "list",
@@ -47,7 +74,7 @@ function generateSVG(choices) {
 
   if (!svgGenerator) {
     console.error("Invalid shape selected");
-    return '';
+    return "";
   }
 
   return svgGenerator(choices);
@@ -81,7 +108,9 @@ function confirmAndGenerateSVG(choices) {
         const svgContent = generateSVG(choices);
         writeToFile("logo.svg", svgContent);
       } else {
-        console.log("Unable to generate SVG logo. Try again from the beginning.");
+        console.log(
+          "Unable to generate SVG logo. Try again from the beginning."
+        );
       }
     });
 }

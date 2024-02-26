@@ -7,7 +7,7 @@ AS a freelance web developer
 
 I WANT to generate a simple logo for my projects
 
-SO THAT I don't have to pay a graphic designer
+SO THAT I can organize my projects easily with color coding for subject , initials of my project title and shape for personal, 
 
 **Acceptance Criteria**
 
@@ -46,3 +46,15 @@ Your task is to build a Node.js command-line application that takes in user inpu
 Because this application won’t be deployed, you’ll need to provide a link to a walkthrough video that demonstrates its functionality and passes all of the tests. You’ll need to submit a link to the video and add it to the README of your project.
 
 Refer to the Video Submission GuideLinks to an external site. on the Full-Stack Blog for additional guidance on creating a video.
+
+# References
+
+Referenced code from Challange: [09-build-a-readme](https://github.com/SamGreenwood84/09-build-a-readme.git) 
+
+Youtube Walkthrough: [Thomas' Object Oriented Programming SVG LOGO MAKER](https://www.youtube.com/watch?v=GJYMcLus3v0)
+
+mdn web docs:  
+
+
+
+
