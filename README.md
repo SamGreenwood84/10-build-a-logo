@@ -2,8 +2,9 @@
 Object-oriented Programming Challenge: SVG Logo Maker
 
 # Live Demo 
+*Demo assumes all installations are complete*
 
-
+<video controls src="assets/demo/build-a-logo.mp4" title="Title"></video>
 
 # User Story
 
@@ -61,6 +62,13 @@ npm test -- -u
 mdn web docs prvovided in BootCamp Spot
 
 Stack Overflow [console.log](https://stackoverflow.com/questions/49660349/how-to-create-line-breaks-in-console-log-in-node-js) 
+
+# Contact & Additonal Information
+
+By Sam Greenwood
+
+[Click here for GitHub Repo link](https://github.com/SamGreenwood84/10-build-a-logo.git) 
+
 
 
 
