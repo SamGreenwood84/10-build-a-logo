@@ -3,7 +3,7 @@ Object-oriented Programming Challenge: SVG Logo Maker
 
 # Live Demo 
 
- [Live Demo-Video(Assumes all installations are complete first)](assets/demo/LiveDemo-build-a-logo.webm)
+
 
 # User Story
 
