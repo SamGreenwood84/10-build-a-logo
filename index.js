@@ -1,10 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const {
-  generateCircleSVG,
-  generateSquareSVG,
-  generateTriangleSVG,
-} = require("./lib/shapes");
+const { Circle, Square, Triangle } = require("./lib/shapes");
 
 console.log(
   "Let's build-a-logo! This easy-to-use CLI tool takes your desired input and generates a simple clean logo!"
@@ -20,11 +16,11 @@ console.log(
 function loadSvgGenerator(shape) {
   switch (shape.toLowerCase()) {
     case "circle":
-      return generateCircleSVG;
+      return new Circle();
     case "square":
-      return generateSquareSVG;
+      return new Square();
     case "triangle":
-      return generateTriangleSVG;
+      return new Triangle();
     default:
       return null;
   }
@@ -107,31 +103,19 @@ function writeToFile(filename, data) {
   });
 }
 
-function confirmAndGenerateSVG(choices) {
-  console.log("Confirm your input:");
-  console.log(JSON.stringify(choices, null, "  "));
+function generateSVG(choices) {
+  const svgGenerator = loadSvgGenerator(choices.shape);
 
-  inquirer
-    .prompt([
-      {
-        type: "confirm",
-        name: "confirmGeneration",
-        message: "Are you happy with your logo? Let's build it!",
-        default: true,
-      },
-    ])
-    .then(({ confirmGeneration }) => {
-      if (confirmGeneration) {
-        const svgContent = generateSVG(choices);
-        writeToFile("logo.svg", svgContent);
-        console.log("*********************************************************")
-        console.log("Congratulations! You've generated logo.svg");
-      } else {
-        console.log(
-          "Unable to generate SVG logo. Try again from the beginning."
-        );
-      }
-    });
+  if (!svgGenerator) {
+    console.error("Invalid shape selected");
+    return "";
+  }
+
+  svgGenerator.text = choices.text;
+  svgGenerator.textColor = choices.textColor;
+  svgGenerator.backgroundColor = choices.backgroundColor;
+
+  return svgGenerator.render();
 }
 
 function startChoices() {
